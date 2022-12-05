@@ -46,15 +46,18 @@ risultato 21 -
 
 ## 6 - Selezionare tutti i corsi di laurea magistrale (38)
 ```sql
-
+SELECT *
+FROM `degrees`
+WHERE `level` LIKE 'magistrale';
 ```
-risultato 38 - 
+risultato 38 - ok
 
 ## 7 - Da quanti dipartimenti è composta l'università? (12)
 ```sql
-
+SELECT *
+FROM `departments`;
 ```
-risultato 12 - 
+risultato 12 - OK
 
 ## 8 - Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
 ```sql
