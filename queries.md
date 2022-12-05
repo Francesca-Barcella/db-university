@@ -57,11 +57,13 @@ risultato 38 - ok
 SELECT *
 FROM `departments`;
 ```
-risultato 12 - OK
+risultato 12 - ok
 
 ## 8 - Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
 ```sql
-
+SELECT * FROM
+`teachers` WHERE
+`phone` IS NULL;
 ```
-risultato 50 - 
+risultato 50 - ok
 
