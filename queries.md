@@ -1,4 +1,4 @@
-## Query Todo:
+# Query Todo:
 1 - Selezionare tutti gli studenti nati nel 1990 (160)
 2 - Selezionare tutti i corsi che valgono più di 10 crediti (479)
 3 - Selezionare tutti gli studenti che hanno più di 30 anni
@@ -28,7 +28,8 @@ risultato 479 - ok
 ```sql
 SELECT*
 FROM `students`
-WHERE Year(2022)-(`date_of_birth`)>30;
+/* WHERE Year(2022)-(`date_of_birth`)>30; */
+WHERE TIMESTAMPDIFF(Year, date_of_birth, curdate()) >30;
 ```
 risultato ? - 5000
 
@@ -70,4 +71,40 @@ SELECT * FROM
 `phone` IS NULL;
 ```
 risultato 50 - ok
+
+# NUOVE QUERY:
+## Group by:
+1 - Contare quanti iscritti ci sono stati ogni anno
+2 - Contare gli insegnanti che hanno l'ufficio nello stesso edificio
+3 - Calcolare la media dei voti di ogni appello d'esame
+4 - Contare quanti corsi di laurea ci sono per ogni dipartimento
+
+## GROUP
+## 1 - Contare quanti iscritti ci sono stati ogni anno
+```sql
+
+```
+## 2 - Contare gli insegnanti che hanno l'ufficio nello stesso edificio
+```sql
+
+```
+## 3 - Calcolare la media dei voti di ogni appello d'esame
+```sql
+
+```
+
+## 4 - Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui sono iscritti e il relativo dipartimento, in ordine alfabetico 1 per cognome e nome
+```sql
+
+```
+## Join:
+1 - Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia
+2 - Selezionare tutti i Corsi di Laurea Magistrale del Dipartimento di Neuroscienze
+3 - Selezionare tutti i corsi in cui insegna Fulvio Amato (id=44)
+4 - Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui sono iscritti e il relativo dipartimento, in ordine alfabetico 1 per cognome e nome
+5 - Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti
+6 - Selezionare tutti i docenti che insegnano nel Dipartimento di Matematica (54)
+
+
+## BONUS: Selezionare per ogni studente quanti tentativi d’esame ha sostenuto per superare ciascuno dei suoi esami
 
