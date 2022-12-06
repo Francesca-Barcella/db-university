@@ -84,11 +84,10 @@ risultato 50 - ok
 ```sql
 /* SELECT COUNT(id) as total_subscribers, year(enrolment_date) FROM students GROUP BY enrolment_date; */
 
-SELECT COUNT(id) as total_subscribers, year(`students`.`enrolment_date`) 
+SELECT COUNT(id) as total_subscribers, year(`students`.`enrolment_date`) as enrolment_year
 FROM `students` 
-GROUP BY `students`.`enrolment_date`;
+GROUP BY year(`enrolment_date`);
 
-/* da capire come si fa la somma per non trovarmi una riga per ogni data */
 ```
 ## 2 - Contare gli insegnanti che hanno l'ufficio nello stesso edificio
 ```sql
