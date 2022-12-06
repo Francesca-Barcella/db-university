@@ -91,7 +91,8 @@ GROUP BY year(`enrolment_date`);
 ```
 ## 2 - Contare gli insegnanti che hanno l'ufficio nello stesso edificio
 ```sql
-
+SELECT COUNT(id) as total_teachers, `office_address` as same_address
+FROM `teachers` GROUP BY `office_address`;
 ```
 ## 3 - Calcolare la media dei voti di ogni appello d'esame
 ```sql
