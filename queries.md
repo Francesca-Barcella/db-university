@@ -92,10 +92,15 @@ GROUP BY year(`enrolment_date`);
 ## 2 - Contare gli insegnanti che hanno l'ufficio nello stesso edificio
 ```sql
 SELECT COUNT(id) as total_teachers, `office_address` as same_address
-FROM `teachers` GROUP BY `office_address`;
+FROM `teachers`
+GROUP BY `office_address`;
 ```
 ## 3 - Calcolare la media dei voti di ogni appello d'esame
+<!-- AVG()	Return the average value of the argument -->
 ```sql
+SELECT AVG(`vote`) as media, `exam_id` as number_degree
+FROM `exam_student`
+GROUP BY `exam_student`.`exam_id`;
 
 ```
 
