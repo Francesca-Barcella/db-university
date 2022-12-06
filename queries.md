@@ -103,10 +103,11 @@ FROM `exam_student`
 GROUP BY `exam_student`.`exam_id`;
 
 ```
-
-## 4 - Selezionare tutti gli studenti con i dati relativi al corso di laurea a cui sono iscritti e il relativo dipartimento, in ordine alfabetico 1 per cognome e nome
+## 4 - Contare quanti corsi di laurea ci sono per ogni dipartimento
 ```sql
-
+SELECT `department_id`, COUNT(id) as total_courses
+FROM `degrees`
+GROUP BY `department_id`;
 ```
 ## Join:
 1 - Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia
